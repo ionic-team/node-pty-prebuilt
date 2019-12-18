@@ -1,0 +1,48 @@
+name: Prebuild Binaries
+
+on:
+  push:
+    branches:
+      - prebuild
+
+jobs:
+  prebuild-linux:
+    name: Prebuild Binaries for Linux
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - uses: actions/checkout@v1
+      - run: npm i
+      - run: |
+          npx prebuild --all -u ${{ secrets.GITHUB_TOKEN }}
+          npx prebuild --all -a ia32 -u ${{ secrets.GITHUB_TOKEN }}
+
+  prebuild-macos:
+    name: Prebuild Binaries for macOS
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - uses: actions/checkout@v1
+      - run: npm i
+      - run: |
+          npx prebuild --all -u ${{ secrets.GITHUB_TOKEN }}
+
+  prebuild-windows:
+    name: Prebuild Binaries for Windows
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - uses: actions/checkout@v1
+      - run: npm i
+      - run: |
+          npx prebuild --all --include-regex "\.(node|exe|dll|pdb)$" -u ${{ secrets.GITHUB_TOKEN }}
+          npx prebuild --all -a ia32 --include-regex "\.(node|exe|dll|pdb)$" -u ${{ secrets.GITHUB_TOKEN }}
