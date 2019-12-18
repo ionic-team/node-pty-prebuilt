@@ -3,7 +3,7 @@
  * Copyright (c) 2018, Microsoft Corporation (MIT License).
  */
 
-declare module 'node-pty' {
+declare module '@ionic/node-pty-prebuilt' {
   /**
    * Forks a process as a pseudoterminal.
    * @param file The file to launch.
