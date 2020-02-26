@@ -19,8 +19,8 @@ jobs:
       - run: npm i
       - run: npx prebuild -t 8.0.0 -t 9.0.0 -t 10.0.0 -t 11.0.0 -t 12.0.0 -t 13.0.0 -u ${{ secrets.GITHUB_TOKEN }}
       - run: npx prebuild -t 8.0.0 -t 9.0.0 -t 10.0.0 -t 11.0.0 -t 12.0.0 -t 13.0.0 -a ia32 -u ${{ secrets.GITHUB_TOKEN }}
-      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -r electron -u ${{ secrets.GITHUB_TOKEN }}
-      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -r electron -a ia32 -u ${{ secrets.GITHUB_TOKEN }}
+      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -t 8.0.0 -r electron -u ${{ secrets.GITHUB_TOKEN }}
+      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -t 8.0.0 -r electron -a ia32 -u ${{ secrets.GITHUB_TOKEN }}
 
   prebuild-macos:
     name: macOS
@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: npm i
       - run: npx prebuild -t 8.0.0 -t 9.0.0 -t 10.0.0 -t 11.0.0 -t 12.0.0 -t 13.0.0 -u ${{ secrets.GITHUB_TOKEN }}
-      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -r electron -u ${{ secrets.GITHUB_TOKEN }}
+      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -t 8.0.0 -r electron -u ${{ secrets.GITHUB_TOKEN }}
 
   prebuild-windows:
     name: Windows
@@ -47,5 +47,5 @@ jobs:
       - run: npm i
       - run: npx prebuild -t 10.0.0 -t 11.0.0 -t 12.0.0 -t 13.0.0 -u ${{ secrets.GITHUB_TOKEN }} --verbose
       - run: npx prebuild -t 10.0.0 -t 11.0.0 -t 12.0.0 -t 13.0.0 -a ia32 -u ${{ secrets.GITHUB_TOKEN }} --verbose
-      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -r electron -u ${{ secrets.GITHUB_TOKEN }} --verbose
-      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -r electron -a ia32 -u ${{ secrets.GITHUB_TOKEN }} --verbose
+      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -t 8.0.0 -r electron -u ${{ secrets.GITHUB_TOKEN }} --verbose
+      - run: npx prebuild -t 4.0.0 -t 4.0.4 -t 5.0.0 -t 6.0.0 -t 7.0.0 -t 8.0.0 -r electron -a ia32 -u ${{ secrets.GITHUB_TOKEN }} --verbose
