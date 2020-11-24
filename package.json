@@ -1,16 +1,16 @@
 {
-  "name": "@ionic/node-pty-prebuilt",
+  "name": "@slimjimsoftware/node-pty-prebuilt",
   "description": "Fork pseudoterminals in Node.JS",
   "author": {
     "name": "Microsoft Corporation"
   },
-  "version": "0.9.1",
+  "version": "0.10.0",
   "license": "MIT",
   "main": "./lib/index.js",
   "types": "./typings/node-pty.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ionic-team/node-pty-prebuilt.git"
+    "url": "git://github.com/slimjimsoftware/node-pty-prebuilt.git"
   },
   "files": [
     "binding.gyp",
@@ -20,9 +20,9 @@
     "deps/",
     "typings/"
   ],
-  "homepage": "https://github.com/ionic-team/node-pty-prebuilt",
+  "homepage": "https://github.com/slimjimsoftware/node-pty-prebuilt",
   "bugs": {
-    "url": "https://github.com/ionic-team/node-pty-prebuilt/issues"
+    "url": "https://github.com/slimjimsoftware/node-pty-prebuilt/issues"
   },
   "keywords": [
     "pty",
