@@ -1,4 +1,4 @@
-# @ionic/node-pty-prebuilt
+# @slimjimsoftware/node-pty-prebuilt
 
 Parallel fork of [`node-pty`](https://github.com/microsoft/node-pty) that prebuilds binaries using Github Actions.
 
