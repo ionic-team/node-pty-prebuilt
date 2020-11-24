@@ -13,6 +13,7 @@ Parallel fork of [`node-pty`](https://github.com/microsoft/node-pty) that prebui
 1. Pull `master` from [`microsoft/node-pty`](https://github.com/microsoft/node-pty) into `master` branch
 1. Merge tagged release commits (e.g. [`0.9.0`](https://github.com/microsoft/node-pty/releases/tag/0.9.0)) into `prebuild` branch
     - Discard any conflicts in `README.md`
+    - Fix any other conflicts
 1. Push and wait for Github Actions to finish
     - This step creates a release in Github and uploads all the prebuilt binaries.
 1. Run `npm publish` to release the new version
