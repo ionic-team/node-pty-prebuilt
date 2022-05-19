@@ -14,7 +14,7 @@ jobs:
       - run: sudo apt-get install g++-multilib
       - uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.15.0
       - uses: actions/checkout@v1
       - run: npm i
       - run: npx prebuild -t 8.0.0 -t 9.0.0 -t 10.0.0 -t 11.0.0 -t 12.0.0 -t 13.0.0 -u ${{ secrets.GITHUB_TOKEN }}
